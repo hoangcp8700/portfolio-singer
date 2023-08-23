@@ -1,0 +1,9 @@
+@import './global';
+
+@import './taildwindcss.css';
+
+@font-face {
+  font-display: swap;
+  font-family: Bartleen Script;
+  src: url('../assets/fonts/Bartleen Script.ttf') format('ttf');
+}
