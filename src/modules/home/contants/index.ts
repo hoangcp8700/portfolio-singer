@@ -6,36 +6,38 @@ import contactIcon from '@shared/assets/icons/ic_contact.svg';
 import listIcon from '@shared/assets/icons/ic_list.svg';
 import socialIcon from '@shared/assets/icons/ic_socials.png';
 
+import { HomeSectionEnum } from '../enum';
+
 const navigateMenus = [
   {
+    id: HomeSectionEnum.Home,
     icon: homeIcon,
-    label: 'Home',
-    url: 'section=my-home',
+    label: 'Young',
   },
   {
+    id: HomeSectionEnum.Introduce,
     icon: informationIcon,
     label: 'Giới Thiệu',
-    url: 'section=gioi-thieu',
   },
   {
+    id: HomeSectionEnum.Product,
     icon: listIcon,
     label: 'Sản Phẩm',
-    url: 'section=san-pham',
   },
   {
+    id: HomeSectionEnum.Brand,
     icon: peopleIcon,
     label: 'Hợp Tác',
-    url: 'section=hop-tac',
   },
   {
+    id: HomeSectionEnum.Social,
     icon: socialIcon,
     label: 'Mạng Xã Hội',
-    url: 'section=mang-xa-hoi',
   },
   {
+    id: HomeSectionEnum.Contact,
     icon: contactIcon,
     label: 'Liên Hệ',
-    url: 'section=lien-he',
   },
 ];
 

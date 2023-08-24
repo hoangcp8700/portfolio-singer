@@ -1,18 +1,29 @@
 import { navigateMenus } from '@modules/home/contants';
+import { HomeSectionEnum } from '@modules/home/enum';
+// import Button from '@shared/components/atoms/Button';
 import Image from '@shared/components/atoms/Image';
-import Link from '@shared/components/atoms/Link';
+import clsx from 'clsx';
 
-const Navigate: React.FC = () => {
+interface NavigateProps {
+  sectionCurrent?: HomeSectionEnum;
+  onChangeSection: (sectionName: HomeSectionEnum) => void;
+}
+
+const Navigate = ({ sectionCurrent, onChangeSection }: NavigateProps) => {
   return (
     <div className='fixed bottom-[10%] z-[1] right-[24px] flex flex-col gap-y-5 rounded-xl px-4 py-6 b bg-primary-gradient'>
       {navigateMenus.map((el) => (
         <div
-          key={el.url}
-          className='w-8 transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-110 cursor-pointer'
+          key={el.id}
+          className={clsx(
+            'w-8 transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-110 cursor-pointer',
+            sectionCurrent === el.id && 'opacity-100',
+          )}
+          title={el.label}
+          aria-hidden
+          onClick={() => onChangeSection(el.id)}
         >
-          <Link href='/' search={el.url}>
-            <Image src={el.icon} alt={el.label} className='invert' />
-          </Link>
+          <Image src={el.icon} alt={el.label} className='invert' />
         </div>
       ))}
     </div>
