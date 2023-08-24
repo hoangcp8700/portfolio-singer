@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import { CONSTANT_ROUTE } from '@shared/utils/constants';
+import { CONSTANT_ROUTE } from '@shared/constants';
 import { useRoutes } from 'react-router-dom';
 
 import { Home, LayoutDefault } from './PageLazy';
