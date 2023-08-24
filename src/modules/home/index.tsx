@@ -4,12 +4,11 @@ import Contact from './components/contacts';
 import Introduce from './components/introduce';
 import Navigate from './components/navigate';
 import Product from './components/product';
-import Social from './components/social';
 import { banner } from './contants';
 import useScrollSection from './hooks/useScrollSection';
 
 const Home = () => {
-  const { bannerRef, brandRef, contactRef, introduceRef, productsRef, socialRef, sectionCurrent, onChangeSection } =
+  const { bannerRef, brandRef, contactRef, introduceRef, productsRef, sectionCurrent, onChangeSection } =
     useScrollSection();
 
   return (
@@ -26,9 +25,6 @@ const Home = () => {
       </div>
       <div ref={brandRef}>
         <Branch />
-      </div>
-      <div ref={socialRef}>
-        <Social />
       </div>
       <div ref={contactRef}>
         <Contact />

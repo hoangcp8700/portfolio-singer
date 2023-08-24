@@ -1,8 +1,7 @@
 export enum HomeSectionEnum {
-  Home = 'Young',
+  Home = 'Yung',
   Brand = 'hop-tac',
   Contact = 'lien-he',
   Introduce = 'gioi-thieu',
   Product = 'san-pham',
-  Social = 'mang-xa-hoi',
 }

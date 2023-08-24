@@ -11,12 +11,12 @@ interface NavigateProps {
 
 const Navigate = ({ sectionCurrent, onChangeSection }: NavigateProps) => {
   return (
-    <div className='fixed bottom-[10%] z-[1] right-[24px] flex flex-col gap-y-5 rounded-xl px-4 py-6 b bg-primary-gradient'>
+    <div className='fixed bottom-[10%] right-[12px] md:right-[24px] flex flex-col gap-y-5 rounded-xl px-4 py-6 b bg-primary-gradient z-[10]'>
       {navigateMenus.map((el) => (
         <div
           key={el.id}
           className={clsx(
-            'w-8 transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-110 cursor-pointer',
+            'w-6 md:w-8 transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-110 cursor-pointer',
             sectionCurrent === el.id && 'opacity-100',
           )}
           title={el.label}

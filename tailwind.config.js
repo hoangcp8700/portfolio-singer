@@ -22,9 +22,6 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
-      fontFamily: {
-        bartleen: ['Bartleen Script', ...fontFamily.sans],
-      },
       screens,
       colors: {
         purple1: '#d159f2',

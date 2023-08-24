@@ -4,7 +4,9 @@ import informationIcon from '@shared/assets/icons/ic_information.svg';
 import peopleIcon from '@shared/assets/icons/ic_people.svg';
 import contactIcon from '@shared/assets/icons/ic_contact.svg';
 import listIcon from '@shared/assets/icons/ic_list.svg';
-import socialIcon from '@shared/assets/icons/ic_socials.png';
+import MailIcon from '@shared/assets/icons/ic_mail.svg';
+import AddressIcon from '@shared/assets/icons/ic_address.svg';
+import PhoneIcon from '@shared/assets/icons/ic_phone.svg';
 
 import { HomeSectionEnum } from '../enum';
 
@@ -12,7 +14,7 @@ const navigateMenus = [
   {
     id: HomeSectionEnum.Home,
     icon: homeIcon,
-    label: 'Young',
+    label: 'Yung',
   },
   {
     id: HomeSectionEnum.Introduce,
@@ -29,11 +31,7 @@ const navigateMenus = [
     icon: peopleIcon,
     label: 'Hợp Tác',
   },
-  {
-    id: HomeSectionEnum.Social,
-    icon: socialIcon,
-    label: 'Mạng Xã Hội',
-  },
+
   {
     id: HomeSectionEnum.Contact,
     icon: contactIcon,
@@ -41,8 +39,23 @@ const navigateMenus = [
   },
 ];
 
+const contacts = [
+  {
+    label: '+84 123',
+    icon: PhoneIcon,
+  },
+  {
+    label: 'District 12, Ho Chi Minh City',
+    icon: AddressIcon,
+  },
+  {
+    label: 'email@gmail.com',
+    icon: MailIcon,
+  },
+];
+
 const banner = {
   bannerAvatar,
-  title: 'Young Profile',
+  title: 'Yung Profile',
 };
-export { banner, navigateMenus };
+export { banner, contacts, navigateMenus };

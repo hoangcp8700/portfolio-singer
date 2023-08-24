@@ -10,7 +10,6 @@ const useScrollSection = () => {
   const contactRef = useRef<HTMLDivElement>(null);
   const introduceRef = useRef<HTMLDivElement>(null);
   const productsRef = useRef<HTMLDivElement>(null);
-  const socialRef = useRef<HTMLDivElement>(null);
 
   const sectionCurrent = (searchParams.get('section') || HomeSectionEnum.Home) as HomeSectionEnum;
 
@@ -62,24 +61,11 @@ const useScrollSection = () => {
     [],
   );
 
-  const socialScroll = useCallback(
-    () =>
-      socialRef?.current?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      }),
-    [],
-  );
-
   const section = searchParams.get('section');
 
   useEffect(() => {
     if (section) {
       switch (section) {
-        case HomeSectionEnum.Social:
-          console.log('222');
-          socialScroll();
-          break;
         case HomeSectionEnum.Introduce:
           introduceScroll();
           break;
@@ -101,7 +87,7 @@ const useScrollSection = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [section]);
 
-  return { bannerRef, brandRef, contactRef, introduceRef, productsRef, socialRef, sectionCurrent, onChangeSection };
+  return { bannerRef, brandRef, contactRef, introduceRef, productsRef, sectionCurrent, onChangeSection };
 };
 
 export default useScrollSection;
