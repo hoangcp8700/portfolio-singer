@@ -1,5 +1,4 @@
-import { FieldValues, FormState, UseFormReturn } from 'react-hook-form';
-import { InputProps } from '@shared/components/atoms/Input';
+import { FieldValues, SubmitHandler, UseFormReturn } from 'react-hook-form';
 
 import { FormControlProps } from './components/FormControl';
 import { FieldErrorProps } from './components/FieldError';
@@ -13,13 +12,11 @@ export interface FormProps<Value extends FieldValues = any> {
   children?: React.ReactNode;
   className?: string;
   methods: UseFormReturn<Value>;
-  resetAfterSave?: boolean;
-  onSubmit?: (
+  onSubmit: (
     values: Value,
-    defaultValues?: Value,
-    formState?: FormState<Value>,
-    formHandlers?: UseFormReturn<Value>,
-  ) => void | Promise<void>;
+    formHandlers: UseFormReturn<Value>,
+    event: React.FormEvent<HTMLFormElement>,
+  ) => void | Promise<void> | ReturnType<SubmitHandler<Value>>;
 }
 
 export interface FormProviderProps extends FormProps {
@@ -28,13 +25,5 @@ export interface FormProviderProps extends FormProps {
   FieldLabel?: React.FC<FieldLabelProps>;
   ErrorMessage?: React.FC<ErrorMessageProps>;
   FieldSubmit?: React.FC<FieldSubmitProps>;
-  InputControl?: React.FC<InputControlProps>;
   FormGroup?: React.FC<FormGroupProps>;
-}
-
-export interface InputControlProps extends InputProps {
-  label?: string;
-  name: string;
-  required?: boolean;
-  showErrorMessage?: boolean;
 }

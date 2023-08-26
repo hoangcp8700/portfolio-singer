@@ -58,4 +58,13 @@ const banner = {
   bannerAvatar,
   title: 'Yung Profile',
 };
-export { banner, contacts, navigateMenus };
+
+const info = {
+  name: 'Vũ Đàm Thùy Dung',
+  careers: ['Artist', 'Singer', 'SongWrite', 'Tiktok Influencer'],
+};
+
+const contactDescription1 = 'Do you have any questions, suggestions or feedback?';
+const contactDescription2 = "I'd love to hear form you!";
+
+export { banner, contacts, info, navigateMenus, contactDescription1, contactDescription2 };

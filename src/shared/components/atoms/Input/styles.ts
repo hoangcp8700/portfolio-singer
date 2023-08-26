@@ -3,7 +3,6 @@ import tw from 'twin.macro';
 
 export interface StyledInputProps {
   sizes?: 'sm' | 'md' | 'lg';
-  radius?: 'md' | 'lg' | 'full' | 'none';
   fullWidth?: boolean;
   error?: boolean;
 }
@@ -22,15 +21,14 @@ const styles = {
   },
 };
 
-export const StyledWrapperInput = styled.div<StyledInputProps>(({ fullWidth }) => [
+export const StyledWrapperInput = styled.div<StyledInputProps>(({ fullWidth = true }) => [
   fullWidth ? tw`w-full` : tw`w-max`,
   tw`relative`,
 ]);
 
-export const StyledInput = styled.input<StyledInputProps>(({ sizes, radius, disabled, error }) => [
-  tw`reset-input relative block bg-transparent border transition-all w-full px-6 focus:ring-0 duration-300`,
+export const StyledInput = styled.input<StyledInputProps>(({ sizes = 'sm', disabled, error }) => [
+  tw`reset-input relative block bg-transparent border-b transition-all w-full px-4 focus:ring-0 duration-300`,
   sizes && styles.sizes[sizes],
-  radius && styles.radius[radius],
   error
     ? tw`text-red-600 border-red-500 focus:border-red-600 placeholder:text-red-400 pr-10`
     : tw`text-gray-800 border-gray-700 focus:border-blue-600 placeholder:text-gray-600 focus:placeholder:text-gray-500/75`,

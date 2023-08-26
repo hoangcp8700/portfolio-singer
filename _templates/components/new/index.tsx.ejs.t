@@ -1,5 +1,5 @@
 ---
-to: src/components/<%= level %>/<%= h.changeCase.pascal(name) %>/index.tsx
+to: src/shared/components/<%= level %>/<%= h.changeCase.pascal(name) %>/index.tsx
 ---
 import React from 'react';
 

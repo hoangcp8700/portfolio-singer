@@ -29,7 +29,6 @@
     "prettier": "prettier --write src/**/*.{ts,tsx,css,json} --config ./.prettierrc",
     "gen:component": "hygen components new",
     "gen:page": "hygen pages new",
-    "gen:container": "hygen containers new",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepare": "husky install"

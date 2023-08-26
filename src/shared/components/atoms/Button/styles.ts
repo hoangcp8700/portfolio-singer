@@ -58,5 +58,5 @@ export const StyledWrapperButton = styled.div<StyledWrapperButtonProps>(({ varia
 export const StyleButton = styled.button<ButtonElementProps>(({ disabled }) => [
   disabled &&
     tw`bg-gray-300 shadow-inner text-gray-800 cursor-not-allowed opacity-70 hover:bg-gray-700 hover:text-gray-400`,
-  tw`reset-button relative h-full flex adjust-flex-center overflow-hidden transition-all px-5 sm:px-8 focus:ring-0 z-1`,
+  tw`reset-button relative h-full flex flex-center overflow-hidden transition-all px-5 sm:px-8 focus:ring-0 z-1`,
 ]);

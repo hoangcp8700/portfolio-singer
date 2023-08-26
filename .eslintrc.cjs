@@ -67,6 +67,7 @@ module.exports = {
         '@typescript-eslint/no-empty-interface': 'off',
         '@typescript-eslint/indent': 'off',
         '@typescript-eslint/no-use-before-define': 'off',
+        'react/prop-types': 'off',
       },
     },
   ],
