@@ -2,6 +2,7 @@ import FacebookIcon from '@shared/assets/icons/facebook.svg';
 import InstagramIcon from '@shared/assets/icons/instagram.svg';
 import TiktokIcon from '@shared/assets/icons/ic_tiktok.svg';
 import YoutubeIcon from '@shared/assets/icons/ic_youtube.svg';
+import PhoneIcon from '@shared/assets/icons/ic_phone.svg';
 
 const socials = [
   {
@@ -19,6 +20,11 @@ const socials = [
   {
     iconSrc: InstagramIcon,
     url: 'https://www.instagram.com/yungyungg_04',
+  },
+  {
+    iconSrc: PhoneIcon,
+    url: 'tel:+0975271927',
+    useExternal: true,
   },
 ];
 export default socials;

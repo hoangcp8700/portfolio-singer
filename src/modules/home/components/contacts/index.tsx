@@ -45,41 +45,39 @@ const Contact: React.FC = () => {
     }
   };
   return (
-    <div className=''>
-      <Container>
-        <div className='flex flex-col-reverse md:flex-row'>
-          <div className='flex-1 pt-8 md:p-4 flex-center flex-col'>
-            <div className='w-full px-2'>
-              <Text className='text-[32px] md:text-[56px] mb-2 font-semibold text-black800'>Contact</Text>
+    <Container noPaddingTopBottom>
+      <div className='flex flex-col-reverse md:flex-row'>
+        <div className='flex-1 pt-8 md:p-4 flex-center flex-col'>
+          <div className='w-full px-2'>
+            <Text className='text-[32px] md:text-[56px] mb-2 font-semibold text-black800'>Liên Hệ</Text>
 
-              <Heading className='text-base md:text-lg font-medium text-black800'>
-                {contactDescription1}
-                <br />
-                {contactDescription2}
-              </Heading>
-            </div>
-            <Form
-              onSubmit={onSubmit}
-              methods={methods}
-              className='flex flex-col gap-y-3 mt-5 md:mt-[50px] w-full relative'
-            >
-              <InputControl name='fullName' placeholder='Your name' />
-              <InputControl name='email' placeholder='email@gmail.com' />
-              <TextareaControl rows={4} name='content' placeholder='Your message' />
-              <Form.FieldSubmit className='font-medium' wrapperClassName='ml-2 mt-4'>
-                Send
-              </Form.FieldSubmit>
-            </Form>
+            <Heading className='text-base md:text-lg font-medium text-black800'>
+              {contactDescription1}
+              <br />
+              {contactDescription2}
+            </Heading>
           </div>
-          <div
-            style={{ backgroundImage: `url(${info1})` }}
-            className='min-h-[60vh] md:min-h-[80vh] relative flex-1 bg-[length:160%_160%] bg-[50%_20%] rounded-2xl overflow-hidden'
+          <Form
+            onSubmit={onSubmit}
+            methods={methods}
+            className='flex flex-col gap-y-3 mt-5 md:mt-[50px] w-full relative'
           >
-            <ThumbnailEffectStyled className='top-[80px] md:top-[165px]' />
-          </div>
+            <InputControl name='fullName' placeholder='Nhập tên của bạn' />
+            <InputControl name='email' placeholder='email@gmail.com' />
+            <TextareaControl rows={4} name='content' placeholder='Hãy gửi thông điệp bạn muốn nhắn...' />
+            <Form.FieldSubmit className='font-medium' wrapperClassName='ml-2 mt-4'>
+              Gửi
+            </Form.FieldSubmit>
+          </Form>
         </div>
-      </Container>
-    </div>
+        <div
+          style={{ backgroundImage: `url(${info1})` }}
+          className='min-h-[60vh] md:min-h-[80vh] relative flex-1 bg-[length:160%_160%] bg-[50%_20%] rounded-2xl overflow-hidden'
+        >
+          <ThumbnailEffectStyled className='top-[80px] md:top-[165px]' />
+        </div>
+      </div>
+    </Container>
   );
 };
 

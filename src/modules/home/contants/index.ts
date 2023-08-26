@@ -56,15 +56,14 @@ const contacts = [
 
 const banner = {
   bannerAvatar,
-  title: 'Yung Profile',
 };
 
 const info = {
   name: 'Vũ Đàm Thùy Dung',
-  careers: ['Artist', 'Singer', 'SongWrite', 'Tiktok Influencer'],
+  careers: ['Diễn Viên', 'Ca Sĩ', 'Nhạc Sĩ', 'Tiktok Influencer'],
 };
 
-const contactDescription1 = 'Do you have any questions, suggestions or feedback?';
-const contactDescription2 = "I'd love to hear form you!";
+const contactDescription1 = 'Bạn có bất kỳ câu hỏi, đề xuất hoặc phản hồi?';
+const contactDescription2 = 'Tôi sẽ luôn lắng nghe ý kiến ​​của bạn!';
 
 export { banner, contacts, info, navigateMenus, contactDescription1, contactDescription2 };

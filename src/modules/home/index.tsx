@@ -1,10 +1,11 @@
 import Banner from './components/banner';
 import Branch from './components/brand';
 import Contact from './components/contacts';
+import Footer from './components/footer';
 import Introduce from './components/introduce';
 import Navigate from './components/navigate';
 import Product from './components/product';
-import { banner } from './contants';
+// import { banner } from './contants';
 import useScrollSection from './hooks/useScrollSection';
 
 const Home = () => {
@@ -15,7 +16,7 @@ const Home = () => {
     <>
       <Navigate sectionCurrent={sectionCurrent} onChangeSection={onChangeSection} />
       <div ref={bannerRef}>
-        <Banner bannerSrc={banner.bannerAvatar} title={banner.title} />
+        <Banner />
       </div>
       <div ref={introduceRef}>
         <Introduce />
@@ -29,6 +30,7 @@ const Home = () => {
       <div ref={contactRef}>
         <Contact />
       </div>
+      <Footer />
     </>
   );
 };
