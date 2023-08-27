@@ -11,17 +11,20 @@ import styled from '@emotion/styled/macro';
 import InputControl from '@shared/components/organisms/Form/InputControl';
 import TextareaControl from '@shared/components/organisms/Form/TextareaControl';
 import Text from '@shared/components/atoms/Text';
+import { sendMail } from '@libs/emailjs';
 
 export interface ContactFormTypes {
   fullName: string;
   email: string;
   content: string;
+  phone: string;
 }
 
 const schemasContactForm = yup.object({
-  fullName: yup.string().required('Full name is required'),
-  email: yup.string().required('Email is required').email('Invalid email'),
-  content: yup.string().max(255, 'Max length is 255 character').default(''),
+  fullName: yup.string().required('Nhập tên'),
+  phone: yup.string().required('Nhập số điện thoại'),
+  email: yup.string().required('Nhập email').email('Email không hợp lệ'),
+  content: yup.string().max(255, 'Tối đa 255 kí tự').default(''),
 });
 
 const Contact: React.FC = () => {
@@ -31,17 +34,22 @@ const Contact: React.FC = () => {
     defaultValues: {
       fullName: '',
       email: '',
+      phone: '',
       content: '',
     },
   });
 
   const onSubmit = async (values: ContactFormTypes, formHandlers: UseFormReturn<ContactFormTypes>) => {
-    console.log('values', values);
-    formHandlers.reset();
     try {
-      throw new Error('error');
+      await sendMail({
+        from_email: values.email,
+        full_name: values.fullName,
+        message: values.content,
+        phone: values.phone,
+      });
+      formHandlers.reset();
     } catch (error) {
-      throw new Error('error');
+      console.log(error);
     }
   };
   return (
@@ -63,7 +71,9 @@ const Contact: React.FC = () => {
             className='flex flex-col gap-y-3 mt-5 md:mt-[50px] w-full relative'
           >
             <InputControl name='fullName' placeholder='Nhập tên của bạn' />
-            <InputControl name='email' placeholder='email@gmail.com' />
+            <InputControl name='email' type='email' placeholder='email@gmail.com' />
+            <InputControl name='phone' placeholder='Nhập số điện thoại của bạn' />
+
             <TextareaControl rows={4} name='content' placeholder='Hãy gửi thông điệp bạn muốn nhắn...' />
             <Form.FieldSubmit className='font-medium' wrapperClassName='ml-2 mt-4'>
               Gửi

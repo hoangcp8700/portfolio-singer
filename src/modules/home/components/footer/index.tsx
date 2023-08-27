@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
         <div className='flex gap-x-3 items-center py-4'>
           {socials.map((item) => {
             return (
-              <div key={item.url} className='w-8 md:w-10'>
+              <div key={item.name} className='w-8 md:w-10'>
                 <Link href={item.url} useExternal={item.useExternal} target='_blank'>
                   <Image src={item.iconSrc} alt={item.url} />
                 </Link>

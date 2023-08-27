@@ -29,6 +29,7 @@ const Product: React.FC = () => {
             <div className='flex flex-col gap-y-8'>
               {productData.map((el) => (
                 <ProductItem
+                  key={el.title}
                   active={el.src === productActive?.src}
                   title={el.title}
                   src={el.src}
