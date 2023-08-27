@@ -29,7 +29,7 @@ const useScrollSection = () => {
     () =>
       introduceRef?.current?.scrollIntoView({
         behavior: 'smooth',
-        block: 'center',
+        block: 'start',
       }),
     [],
   );
@@ -47,7 +47,7 @@ const useScrollSection = () => {
     () =>
       contactRef?.current?.scrollIntoView({
         behavior: 'smooth',
-        block: 'start',
+        block: 'center',
       }),
     [],
   );
@@ -56,7 +56,7 @@ const useScrollSection = () => {
     () =>
       productsRef?.current?.scrollIntoView({
         behavior: 'smooth',
-        block: 'start',
+        block: 'center',
       }),
     [],
   );

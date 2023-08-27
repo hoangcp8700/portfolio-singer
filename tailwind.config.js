@@ -25,7 +25,8 @@ export default {
       screens,
       colors: {
         purple1: '#d159f2',
-        black800: '#333333',
+        black900: '#333333',
+        black800: '#68696D',
       },
       backgroundImage: {
         'loading-ball': "url('src/assets/icons/ic_loading_ball.svg')",

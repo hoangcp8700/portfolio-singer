@@ -1,3 +1,6 @@
+import backgroungApp from '@shared/assets/images/background_app.jpg';
+import styled from '@emotion/styled/macro';
+
 import Banner from './components/banner';
 import Branch from './components/brand';
 import Contact from './components/contacts';
@@ -5,7 +8,6 @@ import Footer from './components/footer';
 import Introduce from './components/introduce';
 import Navigate from './components/navigate';
 import Product from './components/product';
-// import { banner } from './contants';
 import useScrollSection from './hooks/useScrollSection';
 
 const Home = () => {
@@ -13,7 +15,7 @@ const Home = () => {
     useScrollSection();
 
   return (
-    <>
+    <HomeWrapper>
       <Navigate sectionCurrent={sectionCurrent} onChangeSection={onChangeSection} />
       <div ref={bannerRef}>
         <Banner />
@@ -31,8 +33,15 @@ const Home = () => {
         <Contact />
       </div>
       <Footer />
-    </>
+    </HomeWrapper>
   );
 };
 
 export default Home;
+
+const HomeWrapper = styled.div`
+  background-image: url(${backgroungApp});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+`;

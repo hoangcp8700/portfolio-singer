@@ -8,8 +8,8 @@ import tw from 'twin.macro';
 const Introduce: React.FC = () => {
   return (
     <Container>
-      <div className='relative bg-white overflow-hidden md:min-h-screen'>
-        <Heading className='text-[32px] md:text-[56px] font-semibold text-black800'>Giới thiệu</Heading>
+      <div className='relative overflow-hidden'>
+        <Heading className='text-[32px] md:text-[56px] font-semibold text-black900'>Giới thiệu</Heading>
         <div className='flex flex-col gap-y-20 md:gap-y-10 mt-4 md:mt-10'>
           <Card className='before:left-0'>
             Xin chào, Tôi là <b>Vũ Đàm Thùy Dung</b>, sinh năm 2004 và được biết đến với cái tên <b>Yung</b>. Tôi đã

@@ -49,9 +49,9 @@ const Contact: React.FC = () => {
       <div className='flex flex-col-reverse md:flex-row'>
         <div className='flex-1 pt-8 md:p-4 flex-center flex-col'>
           <div className='w-full px-2'>
-            <Text className='text-[32px] md:text-[56px] mb-2 font-semibold text-black800'>Liên Hệ</Text>
+            <Text className='text-[32px] md:text-[56px] mb-2 font-semibold text-black900'>Liên Hệ</Text>
 
-            <Heading className='text-base md:text-lg font-medium text-black800'>
+            <Heading className='text-base md:text-lg font-medium text-black900'>
               {contactDescription1}
               <br />
               {contactDescription2}

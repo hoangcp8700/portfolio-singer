@@ -13,8 +13,8 @@ const Brand: React.FC<BrandProps> = () => (
     <Layer />
     <Container>
       <div>
-        <Heading className='text-black/80 text-[32px] md:text-[54px] font-semibold text-center'>
-          Đã làm việc cùng{' '}
+        <Heading className='text-black900 text-[32px] md:text-[54px] font-semibold text-center'>
+          Đã làm việc cùng
         </Heading>
         <div className='grid grid-cols-3 md:grid-cols-5 gap-8 mt-10'>
           {brands.map((item) => (
