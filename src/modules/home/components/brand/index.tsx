@@ -3,6 +3,7 @@ import Container from '@shared/components/common/Container';
 import brands from '@modules/home/contants/brand';
 import Image from '@shared/components/atoms/Image';
 import Heading from '@shared/components/atoms/Heading';
+import Animate from '@shared/components/molecules/Animate';
 
 import Layer from './components/layer';
 
@@ -13,16 +14,19 @@ const Brand: React.FC<BrandProps> = () => (
     <Layer />
     <Container>
       <div>
-        <Heading className='text-black900 text-[32px] md:text-[54px] font-semibold text-center'>
-          Đã làm việc cùng
-        </Heading>
+        <Animate name='fade-right'>
+          <Heading className='text-black900 text-[32px] md:text-[54px] font-semibold text-center'>
+            Đã làm việc cùng
+          </Heading>
+        </Animate>
+
         <div className='grid grid-cols-3 md:grid-cols-5 gap-8 mt-10'>
-          {brands.map((item) => (
-            <div className='rounded-2xl overflow-hidden' key={item.label}>
-              {/* <Animate name="zoom-in-up" delay={idx * 100}> */}
-              <Image src={item.logo} alt={item.label} size='contain' />
-              {/* </Animate> */}
-            </div>
+          {brands.map((item, idx) => (
+            <Animate name='zoom-in-up' delay={400 + idx * 100}>
+              <div className='rounded-2xl overflow-hidden' key={item.label}>
+                <Image src={item.logo} alt={item.label} size='contain' />
+              </div>
+            </Animate>
           ))}
         </div>
       </div>

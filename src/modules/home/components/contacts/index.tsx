@@ -13,6 +13,7 @@ import TextareaControl from '@shared/components/organisms/Form/TextareaControl';
 import Text from '@shared/components/atoms/Text';
 import { sendMail } from '@libs/emailjs';
 import useToast from '@shared/components/common/Toast/hooks';
+import Animate from '@shared/components/molecules/Animate';
 
 export interface ContactFormTypes {
   fullName: string;
@@ -65,35 +66,39 @@ const Contact: React.FC = () => {
       <div className='flex flex-col-reverse md:flex-row'>
         <div className='flex-1 pt-8 md:p-4 flex-center flex-col'>
           <div className='w-full px-2'>
-            <Text className='text-[32px] md:text-[56px] mb-2 font-semibold text-black900'>Liên Hệ</Text>
+            <Animate name='fade-right'>
+              <Text className='text-[32px] md:text-[56px] mb-2 font-semibold text-black900'>Liên Hệ</Text>
+            </Animate>
 
-            <Heading className='text-base md:text-lg font-medium text-black900'>
-              {contactDescription1}
-              <br />
-              {contactDescription2}
-            </Heading>
+            <Animate name='fade-right' delay={500}>
+              <Heading className='text-base md:text-lg font-medium text-black900'>
+                {contactDescription1}
+                <br />
+                {contactDescription2}
+              </Heading>
+            </Animate>
           </div>
-          <Form
-            onSubmit={onSubmit}
-            methods={methods}
-            className='flex flex-col gap-y-3 mt-5 md:mt-[50px] w-full relative'
-          >
-            <InputControl name='fullName' placeholder='Nhập tên của bạn' />
-            <InputControl name='email' type='email' placeholder='email@gmail.com' />
-            <InputControl name='phone' placeholder='Nhập số điện thoại của bạn' />
+          <Animate name='fade-right' delay={500} className='mt-5 md:mt-[50px] w-full relative'>
+            <Form onSubmit={onSubmit} methods={methods} className='flex flex-col gap-y-3'>
+              <InputControl name='fullName' placeholder='Nhập tên của bạn' />
+              <InputControl name='email' type='email' placeholder='email@gmail.com' />
+              <InputControl name='phone' placeholder='Nhập số điện thoại của bạn' />
 
-            <TextareaControl rows={4} name='content' placeholder='Hãy gửi thông điệp bạn muốn nhắn...' />
-            <Form.FieldSubmit className='font-medium' wrapperClassName='ml-2 mt-4'>
-              Gửi
-            </Form.FieldSubmit>
-          </Form>
+              <TextareaControl rows={4} name='content' placeholder='Hãy gửi thông điệp bạn muốn nhắn...' />
+              <Form.FieldSubmit className='font-medium' wrapperClassName='ml-2 mt-4'>
+                Gửi
+              </Form.FieldSubmit>
+            </Form>
+          </Animate>
         </div>
-        <div
-          style={{ backgroundImage: `url(${info1})` }}
+        <Animate
           className='relative flex-1 bg-[length:cover] bg-[50%_20%] rounded-2xl overflow-hidden'
+          name='fade-left'
+          delay={300}
+          style={{ backgroundImage: `url(${info1})` }}
         >
           <ThumbnailEffectStyled className='top-[80px] md:top-[100px]' />
-        </div>
+        </Animate>
       </div>
     </Container>
   );

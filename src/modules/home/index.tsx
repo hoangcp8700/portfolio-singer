@@ -1,5 +1,7 @@
 import backgroungApp from '@shared/assets/images/background_app.jpg';
 import styled from '@emotion/styled/macro';
+import { useEffect } from 'react';
+import AOS from 'aos';
 
 import Banner from './components/banner';
 import Branch from './components/brand';
@@ -13,6 +15,10 @@ import useScrollSection from './hooks/useScrollSection';
 const Home = () => {
   const { bannerRef, brandRef, contactRef, introduceRef, productsRef, sectionCurrent, onChangeSection } =
     useScrollSection();
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <HomeWrapper>

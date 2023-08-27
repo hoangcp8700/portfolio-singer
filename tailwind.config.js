@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 import plugin from 'tailwindcss/plugin';
-import { fontFamily } from 'tailwindcss/defaultTheme';
 
 const screens = {
   xxs: '320px',
@@ -13,11 +12,11 @@ const screens = {
 
 export default {
   content: [
-    './src/*.{ts,tsx}',
-    './src/pages/**/*.{ts,tsx}',
-    './src/modules/**/*.{ts,tsx}',
-    './src/shared/components/**/*.{ts,tsx}',
     './index.html',
+    './src/*.{js,jsx,ts,tsx}',
+    './src/pages/**/*.{js,jsx,ts,tsx}',
+    './src/modules/**/*.{js,jsx,ts,tsx}',
+    './src/shared/components/**/*.{js,jsx,ts,tsx}',
   ],
   darkMode: 'class',
   theme: {

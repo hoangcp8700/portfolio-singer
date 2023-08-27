@@ -1,0 +1,4 @@
+@import './shared/styles/taildwindcss';
+@import './shared/styles/fonts';
+@import './shared/styles/global';
+@import 'aos/dist/aos.css';

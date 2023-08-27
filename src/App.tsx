@@ -1,7 +1,7 @@
 import React from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import AppRouter from '@routes';
-import './shared/styles/index.css';
+import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import ToastifyProvider from '@shared/components/common/Toast';

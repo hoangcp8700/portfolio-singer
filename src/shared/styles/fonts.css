@@ -1,41 +1,41 @@
 @font-face {
   font-family: HK Grotesk Wide;
-  src: url('src/shared/assets/fonts/hkgroteskwide-light1.otf') format('opentype');
+  src: url('../../shared/assets/fonts/Hkgroteskwide-Light.otf') format('opentype');
   font-weight: 300;
 }
 
 @font-face {
   font-family: HK Grotesk Wide;
-  src: url('src/shared/assets/fonts/hkgroteskwide-regular.otf') format('opentype');
-  font-weight: 400;
+  src: url('../../shared/assets/fonts/Hkgroteskwide-Regular.otf') format('opentype');
+  font-weight: normal;
 }
 
 @font-face {
   font-family: HK Grotesk Wide;
-  src: url('src/shared/assets/fonts/hkgroteskwide-medium.otf') format('opentype');
+  src: url('../../shared/assets/fonts/Hkgroteskwide-Medium.otf') format('opentype');
   font-weight: 500;
 }
 
 @font-face {
   font-family: HK Grotesk Wide;
-  src: url('src/shared/assets/fonts/hkgroteskwide-semibold.otf') format('opentype');
+  src: url('../../shared/assets/fonts/Hkgroteskwide-Semibold.otf') format('opentype');
   font-weight: 600;
 }
 
 @font-face {
   font-family: HK Grotesk Wide;
-  src: url('src/shared/assets/fonts/hkgroteskwide-bold.otf') format('opentype');
+  src: url('../../shared/assets/fonts/Hkgroteskwide-Bold.otf') format('opentype');
   font-weight: 700;
 }
 
 @font-face {
   font-family: HK Grotesk Wide;
-  src: url('src/shared/assets/fonts/hkgroteskwide-extrabold.otf') format('opentype');
+  src: url('../../shared/assets/fonts/Hkgroteskwide-Extrabold.otf') format('opentype');
   font-weight: 800;
 }
 
 @font-face {
   font-family: HK Grotesk Wide;
-  src: url('src/shared/assets/fonts/hkgroteskwide-black.otf') format('opentype');
+  src: url('../../shared/assets/fonts/Hkgroteskwide-Black.otf') format('opentype');
   font-weight: 900;
 }

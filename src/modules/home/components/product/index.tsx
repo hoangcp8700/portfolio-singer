@@ -5,6 +5,7 @@ import productData from '@modules/home/contants/products';
 import styled from '@emotion/styled/macro';
 import clsx from 'clsx';
 import useDevices from '@shared/hooks/useDevices';
+import Animate from '@shared/components/molecules/Animate';
 
 import ProductItem, { ProductItemPlayer, ProductItemProps } from './components/ProductItem';
 
@@ -22,22 +23,27 @@ const Product: React.FC = () => {
   return (
     <Container noPaddingTopBottom>
       <div className='bg-white/30 px-4 md:px-8 py-8 md:py-16 rounded-2xl'>
-        <Heading className='text-lg md:text-[32px] font-medium mb-4 md:mb-10 text-black900'>Danh sách bài hát</Heading>
+        <Animate name='fade-right'>
+          <Heading className='text-lg md:text-[32px] font-medium mb-4 md:mb-10 text-black900'>
+            Danh sách bài hát
+          </Heading>
+        </Animate>
 
         <div className={clsx('flex', !!productActive && 'gap-4')}>
           <div className='flex-1'>
             <div className='flex flex-col gap-y-8'>
-              {productData.map((el) => (
-                <ProductItem
-                  key={el.title}
-                  active={el.src === productActive?.src}
-                  title={el.title}
-                  src={el.src}
-                  desc={el.desc}
-                  date={el.date}
-                  isTablet={isTablet}
-                  onClick={() => openPlayer(el)}
-                />
+              {productData.map((el, idx) => (
+                <Animate key={el.title} name='zoom-in-up' delay={400 + idx * 100}>
+                  <ProductItem
+                    active={el.src === productActive?.src}
+                    title={el.title}
+                    src={el.src}
+                    desc={el.desc}
+                    date={el.date}
+                    isTablet={isTablet}
+                    onClick={() => openPlayer(el)}
+                  />
+                </Animate>
               ))}
             </div>
           </div>

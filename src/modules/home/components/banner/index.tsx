@@ -5,22 +5,28 @@ import info2 from '@shared/assets/images/info_2a.png';
 import { info } from '@modules/home/contants';
 import styled from '@emotion/styled/macro';
 import tw from 'twin.macro';
+import Animate from '@shared/components/molecules/Animate';
 
 const Banner: React.FC = () => {
   return (
     <div className='relative bg-white overflow-hidden'>
       <div className='absolute flex flex-col justify-center z-[1] right-4 md:right-[8%] top-[20%]'>
-        <HeadingStyled
-          className='text-black800 text-[32px] md:text-[64px] text-center font-bold bg-primary-gradient'
-          style={{}}
-        >
-          {info.name}
-        </HeadingStyled>
+        <Animate name='zoom-in-right' delay={250}>
+          <HeadingStyled
+            className='text-black800 text-[32px] md:text-[64px] text-center font-bold bg-primary-gradient'
+            style={{}}
+          >
+            {info.name}
+          </HeadingStyled>
+        </Animate>
+
         <div className='flex flex-col-reverse md:flex-row flex-wrap items-center gap-4 justify-center mt-4'>
-          {info?.careers?.map((el) => (
-            <HeadingWrapperStyled key={el}>
-              <Heading className='text-sm md:text-xl'>{el}</Heading>
-            </HeadingWrapperStyled>
+          {info?.careers?.map((el, idx) => (
+            <Animate name='zoom-in-up' delay={500 + idx * 100}>
+              <HeadingWrapperStyled>
+                <Heading className='text-sm md:text-xl'>{el}</Heading>
+              </HeadingWrapperStyled>
+            </Animate>
           ))}
         </div>
       </div>

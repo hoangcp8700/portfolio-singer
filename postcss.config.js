@@ -9,7 +9,7 @@ export default {
           cssnano: {},
           //  reduce the file size is to remove any unrequired styles from the final CSS file.
           '@fullhuman/postcss-purgecss': {
-            content: ['./dist/*.html', './src/*.?s', './src/*.?sx'], // List every file that references the classes here. See the docs for PurgeCSS about details
+            content: ['./index.html', './dist/**/*.html', './src/**/*.js', './src/**/*.jsx'], // List every file that references the classes here. See the docs for PurgeCSS about details
           },
         }
       : {}),
