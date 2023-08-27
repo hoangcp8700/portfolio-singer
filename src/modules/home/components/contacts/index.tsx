@@ -12,6 +12,7 @@ import InputControl from '@shared/components/organisms/Form/InputControl';
 import TextareaControl from '@shared/components/organisms/Form/TextareaControl';
 import Text from '@shared/components/atoms/Text';
 import { sendMail } from '@libs/emailjs';
+import useToast from '@shared/components/common/Toast/hooks';
 
 export interface ContactFormTypes {
   fullName: string;
@@ -38,6 +39,7 @@ const Contact: React.FC = () => {
       content: '',
     },
   });
+  const { toastSingleMode } = useToast();
 
   const onSubmit = async (values: ContactFormTypes, formHandlers: UseFormReturn<ContactFormTypes>) => {
     try {
@@ -47,6 +49,12 @@ const Contact: React.FC = () => {
         message: values.content,
         phone: values.phone,
       });
+      toastSingleMode({
+        message: 'Gửi mail thành công!',
+        type: 'success',
+        once: true,
+      });
+
       formHandlers.reset();
     } catch (error) {
       console.log(error);
@@ -82,9 +90,9 @@ const Contact: React.FC = () => {
         </div>
         <div
           style={{ backgroundImage: `url(${info1})` }}
-          className='min-h-[60vh] md:min-h-[80vh] relative flex-1 bg-[length:160%_160%] bg-[50%_20%] rounded-2xl overflow-hidden'
+          className='relative flex-1 bg-[length:cover] bg-[50%_20%] rounded-2xl overflow-hidden'
         >
-          <ThumbnailEffectStyled className='top-[80px] md:top-[165px]' />
+          <ThumbnailEffectStyled className='top-[80px] md:top-[100px]' />
         </div>
       </div>
     </Container>
@@ -97,7 +105,7 @@ const ThumbnailEffectStyled = styled.div`
   position: absolute;
   left: 0;
   right: 0;
-  height: 160px;
+  height: 115px;
   backdrop-filter: blur(2px);
 
   filter: blur(4px);

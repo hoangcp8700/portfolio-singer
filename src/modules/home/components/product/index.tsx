@@ -20,7 +20,7 @@ const Product: React.FC = () => {
     setProductActive(product);
   };
   return (
-    <Container>
+    <Container noPaddingTopBottom>
       <div className='bg-white/30 px-4 md:px-8 py-8 md:py-16 rounded-2xl'>
         <Heading className='text-lg md:text-[32px] font-medium mb-4 md:mb-10 text-black900'>Danh sách bài hát</Heading>
 

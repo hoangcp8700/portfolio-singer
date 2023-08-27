@@ -9,7 +9,7 @@ import Layer from './components/layer';
 interface BrandProps {}
 
 const Brand: React.FC<BrandProps> = () => (
-  <div className='md:min-h-screen py-10'>
+  <div className='py-10'>
     <Layer />
     <Container>
       <div>
