@@ -2,5 +2,4 @@ src/*.test.ts
 node_modules
 vite.config.ts
 tailwind.config.js
-src/stories
 _templates

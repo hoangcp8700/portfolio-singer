@@ -28,14 +28,13 @@ export const favicons: Array<React.ComponentPropsWithoutRef<'link'>> = [
 ];
 
 export const defaultMeta = {
-  title: 'React 18 (Typescript) + React-Router 6 + Webpack 5 HMR Boilerplate',
-  siteName: 'React 18 (Typescript) + React-Router 6 + Webpack 5 HMR Boilerplate',
-  description: '[Webpack 5](https://webpack.js.org/) boilerplate with support of most common loaders and modules',
-  keyword: `react, typescript, webpack, babel, HMR, eslint, prettier, stylelint, hygen, Atomic design pattern,
-boilerplate`,
+  title: 'Yung Portfolio',
+  siteName: 'Yung Portfolio',
+  description: 'Yung Portfolio',
+  keyword: 'Yung Portfolio',
   url: CONSTANTS.DOMAIN_CLIENT,
   type: 'website',
   robots: 'follow, index',
   imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
-  themeColor: '#ffffff',
+  themeColor: '#d159f2',
 };

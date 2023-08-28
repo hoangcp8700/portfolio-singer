@@ -12,11 +12,10 @@ const screens = {
 
 export default {
   content: [
-    './index.html',
-    './src/*.{js,jsx,ts,tsx}',
-    './src/pages/**/*.{js,jsx,ts,tsx}',
-    './src/modules/**/*.{js,jsx,ts,tsx}',
-    './src/shared/components/**/*.{js,jsx,ts,tsx}',
+    './src/**/*.{ts,tsx}',
+    './src/pages/**/*.{ts,tsx}',
+    './src/modules/**/*.{ts,tsx}',
+    './src/shared/components/**/*.{ts,tsx}',
   ],
   darkMode: 'class',
   theme: {

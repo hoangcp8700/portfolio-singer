@@ -11,7 +11,6 @@ module.exports = {
     'airbnb/hooks',
     'plugin:import/typescript',
     'plugin:prettier/recommended',
-    'plugin:storybook/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -44,13 +43,6 @@ module.exports = {
       },
       extends: 'airbnb-typescript',
       rules: {
-        'import/no-extraneous-dependencies': [
-          'error',
-          {
-            devDependencies: ['src/setupTests.ts', 'src/**/*.stories.tsx', 'src/**/*.test.{ts,tsx}'],
-          },
-        ],
-
         'no-param-reassign': [
           'error',
           {
